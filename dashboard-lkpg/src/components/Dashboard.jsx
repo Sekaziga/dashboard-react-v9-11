@@ -11,7 +11,7 @@ import {
 
 function Dashboard() {
   // Ändra [0] => [2] t.ex för annan user
-  const userMusicStats = mockData.users[8];
+  const userMusicStats = mockData.users[4];
 
   return (
     <main className='p-3'>
