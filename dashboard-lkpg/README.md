@@ -8,6 +8,7 @@ A **React.js** dashboard for tracking user music statistics, trending artists, a
 
 ### 🏠 Dashboard Overview
 - **User Profile:** Displays user details such as Id, name, email, location, and profile picture.
+- **ThemeToggle :** Users can switch the app's theme between Dark Mode and Light Mode.
 - **Trending Artists:** Dynamically sorted list of the most popular artists based on total streams.
 - **Monthly Streams Chart:** A bar chart visualizing the user's music streaming activity over the year.
 - **User Streams Leaderboard:** Ranking of users based on total music streams.
