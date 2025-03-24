@@ -51,5 +51,3 @@ npm run dev
  ├── 📜 main.jsx        # React root file
  ├── 📜 index.css       # Global styles
 ```
-
-This structure ensures modularity, making the app easy to scale and maintain.
