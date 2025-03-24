@@ -3,7 +3,7 @@ import React from 'react';
 function Footer() {
   return (
     <footer className='bg-gradient-custom text-white py-6 border-t border-quaternary'>
-      <div className='max-w-6xl mx-auto flex flex-col sm:flex-row justify-center sm:justify-between items-center'>
+      <div className=' mx-auto flex flex-col sm:flex-row justify-center sm:justify-between items-center'>
         <p className='text-sm text-center pl-8'> &#9400; 2025 BeatStats</p>
 
         <div className='flex space-x-4 mt-4 sm:mt-0'>

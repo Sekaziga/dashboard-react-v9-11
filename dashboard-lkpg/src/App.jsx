@@ -10,6 +10,8 @@ import ErrorPage from './pages/ErrorPage';
 import Profiles from './pages/Profiles';
 import AllProfiles from './pages/AllProfiles';
 import TopSongs from './pages/TopSongs';
+import ThemeToggle from './components/ThemeToggle';
+import TrendingArtists from './components/TrendingArtists';
 
 const router = createBrowserRouter([
   {
@@ -32,7 +34,12 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <div>
+      <RouterProvider router={router} />
+      
+    </div>
+  )
 }
 
 export default App;

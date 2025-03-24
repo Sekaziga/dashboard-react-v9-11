@@ -13,23 +13,27 @@ import {
   YAxis,
   Legend,
 } from 'recharts';
+import ThemeToggle from '../components/ThemeToggle';
 
 function Profiles() {
-  // Step 1: Extract the `id` parameter from the URL
+  // Extract the `id` parameter from the URL
   const { id } = useParams();
 
-  // Step 2: Find the user with the matching ID
+  // Find the user with the matching ID
   const user = mockData.users.find((user) => user.id === parseInt(id));
 
-  // Step 3: Handle the case where the user is not found
+  // Handle the case where the user is not found
   if (!user) {
-    return <div className='p-6 text-red-500'>User not found</div>;
+    return <div className='p-6 text-red-500 dark:text-red-400'>User not found</div>;
   }
 
   return (
     <>
       <NavHeader />
-      <main className='p-6'>
+      <div className="flex justify-end mb-4">
+        <ThemeToggle />
+      </div>
+      <main className='p-6 bg-gray-100 dark:bg-gray-900 min-h-screen text-gray-900 dark:text-white'>
         <div className='max-w-4xl mx-auto'>
           <div className='flex gap-4 items-center justify-center'>
             <button className='text-4xl'>
@@ -37,16 +41,16 @@ function Profiles() {
             </button>
             <h1 className='text-4xl font-bold mb-4'>{user.name}</h1>
           </div>
-          <div className='bg-white p-6 rounded-lg shadow-md'>
+          <div className='bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md'>
             <img
               src={user.profilePicture}
               alt={`${user.name}'s profile`}
-              className='w-24 h-24 rounded-full mx-auto mb-4'
+              className='w-24 h-24 rounded-full mx-auto mb-4 border border-gray-300 dark:border-gray-600'
             />
-            <p className='text-gray-600 text-center mb-2'>
+            <p className='text-gray-600 dark:text-gray-300 text-center mb-2'>
               <strong>Email:</strong> {user.email}
             </p>
-            <p className='text-gray-600 text-center mb-4'>
+            <p className='text-gray-600 dark:text-gray-300 text-center mb-4'>
               <strong>Location:</strong> {user.location}
             </p>
 
@@ -75,12 +79,12 @@ function Profiles() {
                 {user.topSongs.map((song) => (
                   <li
                     key={song.song}
-                    className='bg-gray-50 p-4 rounded-lg shadow-sm'
+                    className='bg-gray-50 dark:bg-gray-700 p-4 rounded-lg shadow-sm'
                   >
-                    <p className='text-lg font-medium'>
+                    <p className='text-lg font-medium text-gray-900 dark:text-white'>
                       {song.song} - {song.artist}
                     </p>
-                    <p className='text-sm text-gray-600'>
+                    <p className='text-sm text-gray-600 dark:text-gray-300'>
                       Streams: {song.streams}
                     </p>
                   </li>
