@@ -1,29 +1,53 @@
-# Musiklyssnarstatistik-app
+# 🎵 Music Dashboard App
 
-Den här applikationen gör det möjligt att visa statistik över en individs musiklyssning. Användare kan se data som exempelvis månatliga lyssnare, topplåtar, och andra relevanta musiklyssnarstatistik. Applikationen är utformad för att ge en översiktlig och interaktiv presentation av användarens musiklyssning.
+A **React.js** dashboard for tracking user music statistics, trending artists, and monthly streams. Built using **Vite** and styled with **Tailwind CSS Version 4**.
 
-## Teknologier
+---
 
-- **React**: Ett populärt JavaScript-bibliotek för att bygga användargränssnitt, vilket gör applikationen dynamisk och interaktiv.
-- **Vite**: Ett modernt byggverktyg och utvecklingsserver som gör utvecklingsprocessen snabbare och mer effektiv.
-- **Tailwind CSS**: Ett utility-first CSS-ramverk som används för att skapa responsiva och anpassade användargränssnitt.
-- **Recharts**: Ett bibliotek för att skapa interaktiva och anpassningsbara diagram, som används för att visualisera användarens musikstatistik.
-- **React Router**: Ett bibliotek för att hantera routing i applikationen och navigera mellan olika sidor utan att behöva ladda om sidan.
+## 📌 Features
 
-## Installation
+### 🏠 Dashboard Overview
+- **User Profile:** Displays user details such as Id, name, email, location, and profile picture.
+- **ThemeToggle :** Users can switch the app's theme between Dark Mode and Light Mode.
+- **Trending Artists:** Dynamically sorted list of the most popular artists based on total streams.
+- **Monthly Streams Chart:** A bar chart visualizing the user's music streaming activity over the year.
+- **User Streams Leaderboard:** Ranking of users based on total music streams.
+- **Top Songs:** Displays the most-played songs with artist names and total stream counts.
 
-För att komma igång med projektet, följ dessa steg:
+### 🔗 Navigation
+- **🏠 Home:** Overview of user stats, trending artists, and streaming insights.
+- **🎵 Top Songs:** List of the most popular songs with their respective artists.
+- **👤 Profile:** Displays user-specific details and streaming history.
 
-1. **Klona detta repo**:
+---
 
+## 🛠️ Installation & Setup
 
-2. **Installera beroenden**:
-    Se till att du har [Node.js](https://nodejs.org/) installerat på din dator. 
-    npm install
+### 1️⃣ Clone the Repository
+```sh
+git clone https://github.com/Sekaziga/dashboard-react-v9-11.git
+cd dashboard-react-v9-11
+```
 
+### 2️⃣ Install Dependencies
+```sh
+npm install
+```
 
-3. **Starta utvecklingsservern**:
-    När installationen är klar kan du starta utvecklingsservern genom att köra:
-    npm run dev
+### 3️⃣ Start Development Server
+```sh
+npm run dev
+```
 
+---
 
+## 📂 Project Structure
+```plaintext
+📂 src
+ ├── 📂 components      # Reusable UI components
+ ├── 📂 data            # Mock data for users and artists
+ ├── 📂 pages           # Pages for Home, Top Songs, Profile
+ ├── 📜 App.jsx         # Main app entry point
+ ├── 📜 main.jsx        # React root file
+ ├── 📜 index.css       # Global styles
+```
