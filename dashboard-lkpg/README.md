@@ -26,7 +26,7 @@ A **React.js** dashboard for tracking user music statistics, trending artists, a
 ### 1️⃣ Clone the Repository
 ```sh
 git clone https://github.com/Sekaziga/dashboard-react-v9-11.git
-cd dashboard-react-v9-11
+cd dashboard-react-v9-11/dashboard-lkpg
 ```
 
 ### 2️⃣ Install Dependencies
