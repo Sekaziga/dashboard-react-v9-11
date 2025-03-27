@@ -1,23 +1,17 @@
-import { useEffect, useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { toggleTheme } from "../redux/themeSlice";
 
 const ThemeToggle = () => {
-  const [theme, setTheme] = useState(
-    localStorage.getItem("theme") || "light"
-  );
-
-  useEffect(() => {
-    if (theme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-    localStorage.setItem("theme", theme);
-  }, [theme]);
+  const theme = useSelector((state) => state.theme.theme);
+  const dispatch = useDispatch();
 
   return (
     <button
-      onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-      className="px-4 py-2 border rounded-lg bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-gray-100 transition"
+      onClick={() => {
+        dispatch(toggleTheme());
+        document.documentElement.classList.toggle("dark", theme === "light");
+      }}
+      className="p-2 rounded bg-gray-200 dark:bg-gray-800 text-black dark:text-white"
     >
       {theme === "light" ? "🌙 Dark Mode" : "☀️ Light Mode"}
     </button>
