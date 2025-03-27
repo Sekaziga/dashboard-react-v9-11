@@ -2,8 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 const UserLeaderboard = () => {
-  const users = useSelector(state => state.userLeaderboard.users);
-
+  const users = useSelector((state) => state.userLeaderboard.leaderboard);
   // If no users are available or the users array is empty
   if (!users || users.length === 0) {
     return (
