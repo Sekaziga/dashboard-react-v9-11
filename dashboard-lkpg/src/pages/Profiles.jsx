@@ -30,7 +30,7 @@ function Profiles() {
   return (
     <>
       <NavHeader />
-      <div className="flex justify-end mb-4">
+      <div className="flex justify-end mb-4 mt-6">
         <ThemeToggle />
       </div>
       <main className='p-6 bg-gray-100 dark:bg-gray-900 min-h-screen text-gray-900 dark:text-white'>
