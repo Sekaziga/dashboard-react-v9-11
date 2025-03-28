@@ -1,6 +1,6 @@
 # 🎵 Music Dashboard App
 
-A **React.js** dashboard for tracking user music statistics, trending artists, and monthly streams. Built using **Vite** and styled with **Tailwind CSS Version 4**.
+A **React.js** dashboard for tracking user music statistics, trending artists, and monthly streams. Built using **Vite**, powered by **Redux** for state management, and styled with **Tailwind CSS Version 4**.
 
 ---
 
@@ -23,31 +23,47 @@ A **React.js** dashboard for tracking user music statistics, trending artists, a
 
 ## 🛠️ Installation & Setup
 
-### 1️⃣ Clone the Repository
+### 1⃣ Clone the Repository
 ```sh
 git clone https://github.com/Sekaziga/dashboard-react-v9-11.git
 cd dashboard-react-v9-11/dashboard-lkpg
 ```
 
-### 2️⃣ Install Dependencies
+### 2⃣ Install Dependencies
 ```sh
 npm install
 ```
 
-### 3️⃣ Start Development Server
+### 3⃣ Start Development Server
 ```sh
 npm run dev
 ```
 
 ---
 
-## 📂 Project Structure
+## 🐂 State Management with Redux
+This project utilizes **Redux** for state management, ensuring a predictable and centralized state store.
+
+### 🔧 Key Redux Features
+- **Global State Management:** Manages user authentication, theme state, and music statistics.
+- **Redux Toolkit:** Simplifies reducers, actions, and store configuration.
+
+### 📘 Redux Structure
 ```plaintext
 📂 src
+ ├── 📂 store          # Redux store setup
+ │   ├── 📜 store.js   # Configures the Redux store
+ │   ├── 📜 themeSlice.js  # Manages theme state
+ │   ├── 📜 trendingArtistsSlice.js  # Handles trending artists data
+ │   ├── 📜 userLeaderboardSlice.js  # Manages user leaderboard state
+ │   ├── 📜 userSlice.js   # Handles user-related state
  ├── 📂 components      # Reusable UI components
  ├── 📂 data            # Mock data for users and artists
  ├── 📂 pages           # Pages for Home, Top Songs, Profile
  ├── 📜 App.jsx         # Main app entry point
- ├── 📜 main.jsx        # React root file
+ ├── 📜 main.jsx        # React root file with Redux provider
  ├── 📜 index.css       # Global styles
 ```
+
+---
+
